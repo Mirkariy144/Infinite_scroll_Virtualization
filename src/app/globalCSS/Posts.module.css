@@ -1,0 +1,36 @@
+.PostContainer {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.post {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  height: 90px;
+}
+
+.postNum {
+  margin: 5px;
+}
+
+.postContent {
+  flex-grow: 1;
+  overflow: hidden;
+  text-align: start;
+}
+
+.postTitle {
+  font-weight: bold;
+  margin: 5px;
+} 
+
+.postBody {
+  margin: 5px;
+  font-style: italic;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
