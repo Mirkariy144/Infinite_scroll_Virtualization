@@ -1,2 +1,2 @@
-export {StandAlonePost} from './standalonePost/StandAlonePost'
-export {PostsContainer} from './postsContainer/PostsContainer'
+export {Post} from './post/Post'
+export {Posts} from './posts/Posts'

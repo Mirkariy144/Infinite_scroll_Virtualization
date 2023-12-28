@@ -1,20 +1,15 @@
-import './globalCSS/App.css';
 import { Route, Routes } from 'react-router-dom';
-import {PostsContainer} from '../pages/index';
-import { StandAlonePost } from '../pages/index';
+import { Posts, Post } from '../pages';
 
-
-
-function App() {
-
+function AppEntry() {
   return (
     <div className="App">
         <Routes>
-          <Route path='/' element={<PostsContainer />} />
-          <Route path='/post/:id' element={<StandAlonePost />} />
+          <Route path='/' element={<Posts />} />
+          <Route path='/post/:id' element={<Post />} />
         </Routes>
     </div>
   );
 }
 
-export default App;
+export default AppEntry;

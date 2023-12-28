@@ -1,14 +1,12 @@
 import React from "react";
 import { FixedSizeList as List } from "react-window"
-import { renderRow } from "../../../entities/api/index"
 
-
-export const MyReactWindow = ({postsList, listLength, onItemsRendered}) => {
+export const MyReactWindow = ({renderRow, listLength, onItemsRendered}) => {
 
    const Row = ({ index, style }) => {
     return (
       <div style={style}>
-        {renderRow({index, postsList})}
+        {renderRow(index)}
       </div>
     );
   }

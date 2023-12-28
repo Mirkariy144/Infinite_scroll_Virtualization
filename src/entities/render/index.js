@@ -1,1 +1,0 @@
-export {renderHandler} from './renderHandler/renderHandler'

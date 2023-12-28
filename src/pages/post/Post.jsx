@@ -1,10 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { postApi } from "../../shared/index";
-import { NavButton } from "../../shared/index";
-import { loader } from "../../shared/index";
+import { postApi, NavButton } from "../../shared";
+import c from './Post.module.css'
 
-export const StandAlonePost = () => {
+export const Post = () => {
 
   const { id } = useParams()
 
@@ -12,11 +11,11 @@ export const StandAlonePost = () => {
 
 
   if (isLoading) {
-    return <div>Загрузка данных</div>
+    return <div className={c.post}>Загрузка данных</div>
   }
 
   return (
-    <div>
+    <div className={c.post}>
       <h1>{post.title}</h1>
       <p>{post.body}</p>
       <NavButton button={'Назад'} nav={-1} />
