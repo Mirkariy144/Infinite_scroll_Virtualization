@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { postApi } from "../../shared/api/rtkApi"
 import { MyReactWindow } from "./posts/MyReactWindow"
 import c from '../../app/globalCSS/Posts.module.css'
+import { renderHandler } from "../../entities/render/index"
 export const PostsContainer = () => {
 
   const [postsList, setPostsList] = useState([])
@@ -9,9 +10,7 @@ export const PostsContainer = () => {
   const {data: posts, isLoading} = postApi.useFetchAllPostsQuery({limit: 15, start: currentPostStart})
 
   const onItemsRendered = ({ visibleStopIndex }) => {
-    if (visibleStopIndex >= currentPostStart + 10 && visibleStopIndex <= postsList.length) {
-      setCurrentPostStart(prev => prev + 15)
-    }
+    renderHandler({ visibleStopIndex, currentPostStart, postsList, setCurrentPostStart })
   }
 
   useEffect(() => {

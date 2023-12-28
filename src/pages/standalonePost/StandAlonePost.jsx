@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { postApi } from "../../shared/index";
 import { NavButton } from "../../shared/index";
+import { loader } from "../../shared/index";
 
 export const StandAlonePost = () => {
 
