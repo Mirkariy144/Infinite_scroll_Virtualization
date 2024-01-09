@@ -5,12 +5,12 @@ import c from './Post.module.css'
 
 export const Post = () => {
 
-  const { id } = useParams()
+  const { id } = useParams<string>()
 
   const {data: post, isLoading} = postApi.useFetchPostByIdQuery(id)
 
 
-  if (isLoading) {
+  if (isLoading || !post) {
     return <div className={c.post}>Загрузка данных</div>
   }
 
@@ -18,7 +18,7 @@ export const Post = () => {
     <div className={c.post}>
       <h1>{post.title}</h1>
       <p>{post.body}</p>
-      <NavButton button={'Назад'} nav={-1} />
+      <NavButton button={'Назад'} nav={'/'} />
     </div>
   )
 }

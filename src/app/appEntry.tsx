@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { Posts, Post } from '../pages';
+import React from 'react';
 
 function AppEntry() {
   return (

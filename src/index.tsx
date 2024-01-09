@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './app/globalCSS/index.css';
-import AppEntry from '@app/appEntry';
+import AppEntry from './app/appEntry';
 import reportWebVitals from './reportWebVitals';
 import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -9,7 +9,7 @@ import { setupStore } from './app/appStore';
 
 
 const store = setupStore();
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
     <HashRouter>
       <Provider store={store}>
