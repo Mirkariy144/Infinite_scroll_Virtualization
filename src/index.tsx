@@ -7,15 +7,16 @@ import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { setupStore } from './app/appStore';
 
-
 const store = setupStore();
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement,
+);
 root.render(
-    <HashRouter>
-      <Provider store={store}>
-        <AppEntry />
-      </Provider>
-    </HashRouter>
+  <HashRouter>
+    <Provider store={store}>
+      <AppEntry />
+    </Provider>
+  </HashRouter>,
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -23,7 +23,7 @@
 .postTitle {
   font-weight: bold;
   margin: 5px;
-} 
+}
 
 .postBody {
   margin: 5px;
@@ -32,5 +32,3 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-
