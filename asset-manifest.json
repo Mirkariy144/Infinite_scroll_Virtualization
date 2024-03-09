@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Infinite_scroll_Virtualization/static/css/main.03110751.css",
-    "main.js": "/Infinite_scroll_Virtualization/static/js/main.df01872f.js",
+    "main.css": "/Infinite_scroll_Virtualization/static/css/main.36512483.css",
+    "main.js": "/Infinite_scroll_Virtualization/static/js/main.5d35120c.js",
     "static/js/787.96a2db77.chunk.js": "/Infinite_scroll_Virtualization/static/js/787.96a2db77.chunk.js",
     "index.html": "/Infinite_scroll_Virtualization/index.html",
-    "main.03110751.css.map": "/Infinite_scroll_Virtualization/static/css/main.03110751.css.map",
-    "main.df01872f.js.map": "/Infinite_scroll_Virtualization/static/js/main.df01872f.js.map",
+    "main.36512483.css.map": "/Infinite_scroll_Virtualization/static/css/main.36512483.css.map",
+    "main.5d35120c.js.map": "/Infinite_scroll_Virtualization/static/js/main.5d35120c.js.map",
     "787.96a2db77.chunk.js.map": "/Infinite_scroll_Virtualization/static/js/787.96a2db77.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.03110751.css",
-    "static/js/main.df01872f.js"
+    "static/css/main.36512483.css",
+    "static/js/main.5d35120c.js"
   ]
 }
