@@ -6,7 +6,7 @@
 .post {
   display: flex;
   align-items: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: 90px;
 }
 
@@ -32,3 +32,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.NavButton {
+  margin: 5px;
+}
+

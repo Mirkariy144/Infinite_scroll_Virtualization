@@ -1,8 +1,8 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { postApi, MyReactWindow, NavButton } from '../../../shared';
-import c from './Posts.module.css';
 import { postsList } from '../model/models';
+import { Box, Card, CardContent, Typography } from '@mui/material';
 
 export const PostsList = () => {
   const [postsList, setPostsList] = useState<postsList[]>([]);
@@ -34,14 +34,64 @@ export const PostsList = () => {
   const renderRow = (index: number) => {
     const post = postsList[index];
     return (
-      <div className={c.post}>
-        <p className={c.postNum}>№{post.id}</p>
-        <div className={c.postContent}>
-          <p className={c.postTitle}>{post.title}</p>
-          <p className={c.postBody}>{post.body}</p>
-        </div>
-        <NavButton button={'Посмотреть'} nav={`/post/${post.id}`} />
-      </div>
+      <Box
+        component={'div'}
+        key={post.id}
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          margin: '5px',
+        }}
+      >
+        <Card
+          variant="outlined"
+          key={post.id}
+          sx={{
+            width: '1100px',
+            height: '90px',
+            margin: '5px',
+          }}
+        >
+          <CardContent
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              height: '90px',
+              padding: '0px',
+              paddingBottom: '0px',
+              backgroundColor: '#1A2027',
+            }}
+          >
+            <Typography variant="h6" margin={1} color={'white'}>
+              №{post.id}
+            </Typography>
+            <CardContent
+              sx={{
+                flexGrow: 1,
+                overflow: 'hidden',
+                textAlign: 'start',
+              }}
+            >
+              <Typography variant="h6" margin={1} color={'white'}>
+                {post.title}
+              </Typography>
+              <Typography
+                variant="body1"
+                textOverflow={'ellipsis'}
+                overflow={'hidden'}
+                margin={1}
+                whiteSpace={'nowrap'}
+                color={'white'}
+              >
+                {post.body}
+              </Typography>
+            </CardContent>
+            <Box sx={{ margin: '5px' }}>
+              <NavButton button={'Посмотреть'} nav={`/post/${post.id}`} />
+            </Box>
+          </CardContent>
+        </Card>
+      </Box>
     );
   };
 
@@ -50,12 +100,12 @@ export const PostsList = () => {
   }
 
   return (
-    <div className={c.PostContainer}>
+    <Box sx={{ width: '1100px', margin: '0 auto' }}>
       <MyReactWindow
         listLength={postsList.length}
         onItemsRendered={onItemsRendered}
         renderRow={renderRow}
       />
-    </div>
+    </Box>
   );
 };
